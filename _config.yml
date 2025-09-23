@@ -1,0 +1,22 @@
+title: Datauto
+description: Automate Your Data Analysis with AI
+url: "https://datauto.dev"
+baseurl: ""
+
+author:
+  name: Mounish Mesa
+  email: mounicar9496@gmail.com
+
+github_username: mounishmesa
+linkedin_username: mounish-jm
+
+theme: minima
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+header_pages:
+  - about.md
+  - projects.md
