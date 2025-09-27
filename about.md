@@ -10,7 +10,7 @@ I'm a Data Analyst and Operations Specialist with 3+ years of experience transfo
 
 ## Background
 
-- **Experience**: Amazon (Transportation Analyst), The Creations Club (Data Analyst)
+- **Experience**: The Creations Club (Business Data Analyst), Amazon (Transportation Specalist), IDA Automation (Operations Analyst)
 - **Education**: MSc International Project Management, Coventry University
 - **Skills**: SQL, Python, Power BI, LLM Integration, Process Optimization
 
@@ -20,6 +20,6 @@ I created Datauto after seeing how Large Language Models can revolutionize data 
 
 ## Connect
 
-- **Email**: mounicar9496@gmail.com
+- **Email**: mounish@datauto.dev
 - **LinkedIn**: [mounish-jm](https://linkedin.com/in/mounish-jm)
 - **GitHub**: [@yourusername](https://github.com/yourusername)
