@@ -20,3 +20,5 @@ plugins:
 header_pages:
   - about.md
   - projects.md
+  - tutorials.md
+  - contact.md
