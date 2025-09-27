@@ -1,0 +1,19 @@
+---
+---
+@import "minima";
+
+/* Custom navigation icons */
+.site-header .page-link {
+  &[href*="about"]::before { 
+    content: "👤 "; 
+  }
+  &[href*="projects"]::before { 
+    content: "🛠️ "; 
+  }
+  &[href*="tutorials"]::before { 
+    content: "📚 "; 
+  }
+  &[href*="contact"]::before { 
+    content: "✉️ "; 
+  }
+}
