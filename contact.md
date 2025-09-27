@@ -8,7 +8,7 @@ permalink: /contact/
 
 ## Professional Inquiries
 
-**Email**: [youremail@datauto.dev](mailto:youremail@datauto.dev)  
+**Email**: [mounish@datauto.dev](mailto:mounish@datauto.dev)  
 **LinkedIn**: [mounish-jm](https://linkedin.com/in/mounish-jm)  
 **GitHub**: [mounishmesa](https://github.com/mounishmesa)
 
