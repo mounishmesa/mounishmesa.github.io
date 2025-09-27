@@ -3,21 +3,21 @@ description: "Automate Your Data Analysis with AI"
 url: "https://datauto.dev"
 baseurl: ""
 
-# Author info (this controls the footer)
 author:
-  name: "Mounish Mesa"
-  email: "mounish@datauto.dev"  # Use professional email when ready
+  name: Mounish Mesa
+  email: mounish@datauto.dev
 
-# Social links (these appear in footer)
 github_username: mounishmesa
 linkedin_username: mounish-jm
 
-# Theme
-theme: minima
+# Try a different theme
+remote_theme: pages-themes/minimal
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-remote-theme
 
 header_pages:
   - about.md
