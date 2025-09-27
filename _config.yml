@@ -1,17 +1,19 @@
 title: Datauto
-description: Automate Your Data Analysis with AI
+description: "Automate Your Data Analysis with AI"
 url: "https://datauto.dev"
 baseurl: ""
 
+# Author info (this controls the footer)
 author:
-  name: Mounish Mesa
-  email: mounicar9496@gmail.com
+  name: "Mounish Mesa"
+  email: "mounish@datauto.dev"  # Use professional email when ready
 
+# Social links (these appear in footer)
 github_username: mounishmesa
 linkedin_username: mounish-jm
 
+# Theme
 theme: minima
-
 plugins:
   - jekyll-feed
   - jekyll-sitemap
