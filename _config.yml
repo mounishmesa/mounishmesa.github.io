@@ -3,8 +3,8 @@ description: "Automate Your Data Analysis with AI"
 url: "https://datauto.dev"
 baseurl: ""
 
-author:
-  name: Mounish Mesa
+
+  author: Mounish Mesa
   email: mounish@datauto.dev
 
 github_username: mounishmesa
