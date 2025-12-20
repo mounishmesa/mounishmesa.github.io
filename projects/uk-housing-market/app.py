@@ -62,10 +62,23 @@ st.markdown("""
 # =============================================================================
 @st.cache_data
 def load_data():
-    """Load data from SQLite database."""
-    conn = sqlite3.connect('data/housing_market.db')
-    df = pd.read_sql("SELECT * FROM transactions", conn)
-    conn.close()
+    """Load data from CSV file."""
+    # Try different file locations
+    try:
+        df = pd.read_csv('data/london_housing_sample.csv')
+    except:
+        try:
+            df = pd.read_csv('data/processed/london_housing_cleaned.csv')
+        except:
+            df = pd.read_csv('london_housing_sample.csv')
+    
+    # Convert date
+    df['date_of_transfer'] = pd.to_datetime(df['date_of_transfer'])
+    df['year'] = df['date_of_transfer'].dt.year
+    df['month'] = df['date_of_transfer'].dt.month
+    df['month_name'] = df['date_of_transfer'].dt.strftime('%B')
+    
+    return df
     
     # Convert date
     df['date_of_transfer'] = pd.to_datetime(df['date_of_transfer'])
