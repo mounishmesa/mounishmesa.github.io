@@ -63,22 +63,33 @@ st.markdown("""
 @st.cache_data
 def load_data():
     """Load data from CSV file."""
+    import os
+    
+    # Get the directory where app.py is located
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    
     # Try different file locations
-    try:
-        df = pd.read_csv('data/london_housing_sample.csv')
-    except:
+    possible_paths = [
+        os.path.join(current_dir, 'data', 'london_housing_sample.csv'),
+        os.path.join(current_dir, 'data', 'processed', 'london_housing_cleaned.csv'),
+        'data/london_housing_sample.csv',
+        'london_housing_sample.csv'
+    ]
+    
+    df = None
+    for path in possible_paths:
         try:
-            df = pd.read_csv('data/processed/london_housing_cleaned.csv')
-        except:
-            df = pd.read_csv('london_housing_sample.csv')
+            df = pd.read_csv(path)
+            st.sidebar.success(f"Data loaded from: {path}")
+            break
+        except FileNotFoundError:
+            continue
     
-    # Convert date
-    df['date_of_transfer'] = pd.to_datetime(df['date_of_transfer'])
-    df['year'] = df['date_of_transfer'].dt.year
-    df['month'] = df['date_of_transfer'].dt.month
-    df['month_name'] = df['date_of_transfer'].dt.strftime('%B')
-    
-    return df
+    if df is None:
+        st.error(f"Data file not found! Tried: {possible_paths}")
+        st.error(f"Current directory: {current_dir}")
+        st.error(f"Files in current dir: {os.listdir(current_dir)}")
+        st.stop()
     
     # Convert date
     df['date_of_transfer'] = pd.to_datetime(df['date_of_transfer'])
