@@ -42,17 +42,17 @@ st.markdown("""
         text-align: center;
         margin-bottom: 2rem;
     }
-    .metric-card {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        padding: 1rem;
+    [data-testid="stMetric"] {
+        background-color: #1e3a5f;
+        padding: 15px;
         border-radius: 10px;
-        color: white;
     }
-    .stMetric {
-        background-color: #f8fafc;
-        padding: 1rem;
-        border-radius: 10px;
-        border: 1px solid #e2e8f0;
+    [data-testid="stMetric"] label {
+        color: #94a3b8 !important;
+    }
+    [data-testid="stMetric"] [data-testid="stMetricValue"] {
+        color: #ffffff !important;
+        font-size: 1.8rem !important;
     }
 </style>
 """, unsafe_allow_html=True)
