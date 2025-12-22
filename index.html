@@ -293,6 +293,81 @@
             font-family: 'JetBrains Mono', monospace;
         }
 
+        /* Live Dashboard Section */
+        .live-dashboard {
+            padding: 6rem 2rem;
+            background: var(--secondary);
+        }
+
+        .live-dashboard .section-header h2 {
+            color: var(--white);
+        }
+
+        .live-dashboard .section-header p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .dashboard-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .dashboard-header {
+            background: var(--gradient);
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dashboard-header h3 {
+            color: var(--white);
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .dashboard-header .live-badge {
+            background: #10b981;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .dashboard-header a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+
+        .dashboard-header a:hover {
+            opacity: 1;
+        }
+
+        .dashboard-iframe {
+            width: 100%;
+            height: 700px;
+            border: none;
+        }
+
         /* Projects Section */
         .projects {
             padding: 6rem 2rem;
@@ -316,6 +391,14 @@
         .project-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-card.featured {
+            grid-column: span 2;
+        }
+
+        .project-card.featured .project-image {
+            height: 250px;
         }
 
         .project-image {
@@ -343,6 +426,11 @@
             font-size: 0.75rem;
             font-weight: 600;
             color: var(--primary);
+        }
+
+        .project-status.completed {
+            background: #10b981;
+            color: white;
         }
 
         .project-content {
@@ -477,8 +565,16 @@
                 grid-template-columns: 1fr;
             }
 
+            .project-card.featured {
+                grid-column: span 1;
+            }
+
             .nav-links {
                 display: none;
+            }
+
+            .dashboard-iframe {
+                height: 500px;
             }
         }
     </style>
@@ -491,6 +587,7 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#dashboard">Live Dashboard</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -505,8 +602,8 @@
                 <p class="tagline">Transforming UK Financial Data into Actionable Insights</p>
                 <p>MSc in Project Management with 2+ years of experience in data analysis, business intelligence, and automation. Specialising in UK financial markets, economic indicators, and predictive analytics.</p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">
-                        <i class="fas fa-folder-open"></i> View Projects
+                    <a href="#dashboard" class="btn btn-primary">
+                        <i class="fas fa-chart-line"></i> View Live Dashboard
                     </a>
                     <a href="#contact" class="btn btn-secondary">
                         <i class="fas fa-envelope"></i> Get in Touch
@@ -521,8 +618,8 @@
                             <div class="stat-label">Years Experience</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number">6</div>
-                            <div class="stat-label">Projects</div>
+                            <div class="stat-number">307K+</div>
+                            <div class="stat-label">Records Analysed</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-number">MSc</div>
@@ -569,7 +666,7 @@
                         <span class="skill-tag">Power BI</span>
                         <span class="skill-tag">DAX</span>
                         <span class="skill-tag">Excel</span>
-                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">Streamlit</span>
                     </div>
                 </div>
                 <div class="skill-card">
@@ -589,6 +686,34 @@
         </div>
     </section>
 
+    <!-- Live Dashboard Section -->
+    <section class="live-dashboard" id="dashboard">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>🏠 Live Dashboard: London Housing Market</h2>
+                <p>Interactive analysis of 100,000+ property transactions across all London boroughs. Filter by year, borough, and property type.</p>
+            </div>
+            <div class="dashboard-container">
+                <div class="dashboard-header">
+                    <h3>
+                        <i class="fas fa-chart-area"></i>
+                        London Housing Market Dashboard
+                        <span class="live-badge">● LIVE</span>
+                    </h3>
+                    <a href="https://mounishmesaappio-yzsowxlcbncfcfctzxje7m.streamlit.app" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                        Open Full Screen
+                    </a>
+                </div>
+                <iframe 
+                    class="dashboard-iframe"
+                    src="https://mounishmesaappio-yzsowxlcbncfcfctzxje7m.streamlit.app?embedded=true"
+                    title="London Housing Market Dashboard">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
     <!-- Projects Section -->
     <section class="projects" id="projects">
         <div class="section-container">
@@ -597,24 +722,27 @@
                 <p>UK-focused financial and economic data analysis showcasing end-to-end analytical capabilities</p>
             </div>
             <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
+                <!-- Featured Project: UK Housing -->
+                <div class="project-card featured">
                     <div class="project-image" style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);">
                         <i class="fas fa-home"></i>
-                        <span class="project-status">In Progress</span>
+                        <span class="project-status completed">✓ Completed</span>
                     </div>
                     <div class="project-content">
                         <h3>UK Housing Market Analysis</h3>
-                        <p>Comprehensive analysis of HM Land Registry data, exploring price trends across London boroughs with predictive modelling.</p>
+                        <p>Comprehensive analysis of HM Land Registry data with 307,584 property transactions across all 33 London boroughs. Features interactive Streamlit dashboard, Power BI reports, and SQL database. Key findings: City of London averages £2.67M, 6.4x price gap between most and least expensive boroughs.</p>
                         <div class="project-tech">
                             <span>Python</span>
+                            <span>Pandas</span>
                             <span>SQL</span>
                             <span>Power BI</span>
-                            <span>Scikit-learn</span>
+                            <span>Streamlit</span>
+                            <span>Plotly</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/mounishmesa/mounishmesa.github.io/tree/main/projects/uk-housing-market" target="_blank"><i class="fab fa-github"></i> Code</a>
-                            <a href="https://mounishmesaappio-yzsowxlcbncfcfctzxje7m.streamlit.app" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/mounishmesa/mounishmesa.github.io/tree/main/projects/uk-housing-market" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                            <a href="https://mounishmesaappio-yzsowxlcbncfcfctzxje7m.streamlit.app" target="_blank"><i class="fas fa-external-link-alt"></i> Live Dashboard</a>
+                            <a href="#dashboard"><i class="fas fa-eye"></i> See Above</a>
                         </div>
                     </div>
                 </div>
@@ -748,7 +876,7 @@
                     <i class="fab fa-linkedin"></i>
                     <span>LinkedIn Profile</span>
                 </a>
-                <a href="https://github.com/yourusername" target="_blank" class="contact-item">
+                <a href="https://github.com/mounishmesa" target="_blank" class="contact-item">
                     <i class="fab fa-github"></i>
                     <span>GitHub Profile</span>
                 </a>
