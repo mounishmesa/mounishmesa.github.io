@@ -24,6 +24,7 @@
             --white: #ffffff;
             --border: #e2e8f0;
             --gradient: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+            --success: #10b981;
         }
 
         body {
@@ -307,6 +308,44 @@
             color: rgba(255, 255, 255, 0.7);
         }
 
+        /* Dashboard Tabs */
+        .dashboard-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .dashboard-tab {
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid transparent;
+            border-radius: 8px;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .dashboard-tab:hover {
+            background: rgba(255, 255, 255, 0.15);
+            color: var(--white);
+        }
+
+        .dashboard-tab.active {
+            background: var(--white);
+            color: var(--primary);
+            border-color: var(--white);
+        }
+
+        .dashboard-panel {
+            display: none;
+        }
+
+        .dashboard-panel.active {
+            display: block;
+        }
+
         .dashboard-container {
             max-width: 1400px;
             margin: 0 auto;
@@ -322,6 +361,10 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
+
+        .dashboard-header.ftse {
+            background: linear-gradient(135deg, #065f46 0%, #10b981 100%);
         }
 
         .dashboard-header h3 {
@@ -340,6 +383,11 @@
             font-size: 0.75rem;
             font-weight: 600;
             animation: pulse 2s infinite;
+        }
+
+        .dashboard-header.ftse .live-badge {
+            background: #fbbf24;
+            color: #1a1a2e;
         }
 
         @keyframes pulse {
@@ -485,6 +533,35 @@
             color: var(--primary-dark);
         }
 
+        /* Key Findings Box */
+        .key-findings {
+            background: var(--background);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--success);
+        }
+
+        .key-findings h4 {
+            font-size: 0.85rem;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .key-findings ul {
+            list-style: none;
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .key-findings li {
+            padding: 0.25rem 0;
+        }
+
+        .key-findings li::before {
+            content: "📊 ";
+        }
+
         /* Contact Section */
         .contact {
             padding: 6rem 2rem;
@@ -576,6 +653,11 @@
             .dashboard-iframe {
                 height: 500px;
             }
+
+            .dashboard-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
@@ -587,7 +669,7 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#dashboard">Live Dashboard</a></li>
+                <li><a href="#dashboard">Live Dashboards</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -603,7 +685,7 @@
                 <p>MSc in Project Management with 2+ years of experience in data analysis, business intelligence, and automation. Specialising in UK financial markets, economic indicators, and predictive analytics.</p>
                 <div class="hero-buttons">
                     <a href="#dashboard" class="btn btn-primary">
-                        <i class="fas fa-chart-line"></i> View Live Dashboard
+                        <i class="fas fa-chart-line"></i> View Live Dashboards
                     </a>
                     <a href="#contact" class="btn btn-secondary">
                         <i class="fas fa-envelope"></i> Get in Touch
@@ -618,16 +700,16 @@
                             <div class="stat-label">Years Experience</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number">307K+</div>
+                            <div class="stat-number">323K+</div>
                             <div class="stat-label">Records Analysed</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number">MSc</div>
-                            <div class="stat-label">Project Management</div>
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Live Dashboards</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-number">Distinction</div>
-                            <div class="stat-label">Classification</div>
+                            <div class="stat-label">MSc Classification</div>
                         </div>
                     </div>
                 </div>
@@ -690,26 +772,62 @@
     <section class="live-dashboard" id="dashboard">
         <div class="section-container">
             <div class="section-header">
-                <h2>🏠 Live Dashboard: London Housing Market</h2>
-                <p>Interactive analysis of 100,000+ property transactions across all London boroughs. Filter by year, borough, and property type.</p>
+                <h2>📊 Live Interactive Dashboards</h2>
+                <p>Real-time data visualizations showcasing UK housing market and FTSE 100 stock analysis</p>
             </div>
-            <div class="dashboard-container">
-                <div class="dashboard-header">
-                    <h3>
-                        <i class="fas fa-chart-area"></i>
-                        London Housing Market Dashboard
-                        <span class="live-badge">● LIVE</span>
-                    </h3>
-                    <a href="https://mounishmesaappio-yzsowxlcbncfcfctzxje7m.streamlit.app" target="_blank">
-                        <i class="fas fa-external-link-alt"></i>
-                        Open Full Screen
-                    </a>
+
+            <!-- Dashboard Tabs -->
+            <div class="dashboard-tabs">
+                <button class="dashboard-tab active" onclick="showDashboard('housing')">
+                    <i class="fas fa-home"></i> Housing Market
+                </button>
+                <button class="dashboard-tab" onclick="showDashboard('ftse')">
+                    <i class="fas fa-chart-line"></i> FTSE 100 Stocks
+                </button>
+            </div>
+
+            <!-- Housing Dashboard -->
+            <div id="housing-panel" class="dashboard-panel active">
+                <div class="dashboard-container">
+                    <div class="dashboard-header">
+                        <h3>
+                            <i class="fas fa-home"></i>
+                            London Housing Market Dashboard
+                            <span class="live-badge">● LIVE</span>
+                        </h3>
+                        <a href="https://mounishmesaappio-yzsowxlcbncfcfctzxje7m.streamlit.app" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            Open Full Screen
+                        </a>
+                    </div>
+                    <iframe 
+                        class="dashboard-iframe"
+                        src="https://mounishmesaappio-yzsowxlcbncfcfctzxje7m.streamlit.app?embedded=true"
+                        title="London Housing Market Dashboard">
+                    </iframe>
                 </div>
-                <iframe 
-                    class="dashboard-iframe"
-                    src="https://mounishmesaappio-yzsowxlcbncfcfctzxje7m.streamlit.app?embedded=true"
-                    title="London Housing Market Dashboard">
-                </iframe>
+            </div>
+
+            <!-- FTSE Dashboard -->
+            <div id="ftse-panel" class="dashboard-panel">
+                <div class="dashboard-container">
+                    <div class="dashboard-header ftse">
+                        <h3>
+                            <i class="fas fa-chart-line"></i>
+                            FTSE 100 Stock Analysis Dashboard
+                            <span class="live-badge">● LIVE</span>
+                        </h3>
+                        <a href="https://mounishmesaappio-vjcsjtrndrnuxd9bejncdq.streamlit.app" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            Open Full Screen
+                        </a>
+                    </div>
+                    <iframe 
+                        class="dashboard-iframe"
+                        src="https://mounishmesaappio-vjcsjtrndrnuxd9bejncdq.streamlit.app?embedded=true"
+                        title="FTSE 100 Stock Analysis Dashboard">
+                    </iframe>
+                </div>
             </div>
         </div>
     </section>
@@ -722,49 +840,64 @@
                 <p>UK-focused financial and economic data analysis showcasing end-to-end analytical capabilities</p>
             </div>
             <div class="projects-grid">
-                <!-- Featured Project: UK Housing -->
-                <div class="project-card featured">
+                <!-- Featured Project 1: UK Housing -->
+                <div class="project-card">
                     <div class="project-image" style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);">
                         <i class="fas fa-home"></i>
                         <span class="project-status completed">✓ Completed</span>
                     </div>
                     <div class="project-content">
                         <h3>UK Housing Market Analysis</h3>
-                        <p>Comprehensive analysis of HM Land Registry data with 307,584 property transactions across all 33 London boroughs. Features interactive Streamlit dashboard, Power BI reports, and SQL database. Key findings: City of London averages £2.67M, 6.4x price gap between most and least expensive boroughs.</p>
+                        <p>Comprehensive analysis of HM Land Registry data covering 307,584 property transactions across all 33 London boroughs.</p>
+                        <div class="key-findings">
+                            <h4>Key Findings:</h4>
+                            <ul>
+                                <li>City of London avg: £2.67M (highest)</li>
+                                <li>6.4x price gap between boroughs</li>
+                                <li>Flats dominate at 51.8% of sales</li>
+                            </ul>
+                        </div>
                         <div class="project-tech">
                             <span>Python</span>
                             <span>Pandas</span>
                             <span>SQL</span>
                             <span>Power BI</span>
                             <span>Streamlit</span>
-                            <span>Plotly</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/mounishmesa/mounishmesa.github.io/tree/main/projects/uk-housing-market" target="_blank"><i class="fab fa-github"></i> View Code</a>
-                            <a href="https://mounishmesaappio-yzsowxlcbncfcfctzxje7m.streamlit.app" target="_blank"><i class="fas fa-external-link-alt"></i> Live Dashboard</a>
-                            <a href="#dashboard"><i class="fas fa-eye"></i> See Above</a>
+                            <a href="https://github.com/mounishmesa/mounishmesa.github.io/tree/main/projects/uk-housing-market" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://mounishmesaappio-yzsowxlcbncfcfctzxje7m.streamlit.app" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
+                <!-- Featured Project 2: FTSE 100 -->
                 <div class="project-card">
                     <div class="project-image" style="background: linear-gradient(135deg, #065f46 0%, #10b981 100%);">
                         <i class="fas fa-chart-line"></i>
-                        <span class="project-status">Coming Soon</span>
+                        <span class="project-status completed">✓ Completed</span>
                     </div>
                     <div class="project-content">
-                        <h3>FTSE 100/250 Stock Analysis</h3>
-                        <p>Real-time stock performance tracking with sector analysis, volatility metrics, and BOE interest rate correlations.</p>
+                        <h3>FTSE 100 Stock Analysis</h3>
+                        <p>Real-time analysis of 30 top FTSE 100 companies with sector performance, volatility metrics, and interactive filtering.</p>
+                        <div class="key-findings">
+                            <h4>Key Findings:</h4>
+                            <ul>
+                                <li>FTSE 100 1-Year Return: +21.22%</li>
+                                <li>Top Performer: Rolls-Royce +99.90%</li>
+                                <li>Best Sector: Financials +54.58%</li>
+                            </ul>
+                        </div>
                         <div class="project-tech">
                             <span>Python</span>
                             <span>yfinance</span>
-                            <span>Streamlit</span>
                             <span>Plotly</span>
+                            <span>Streamlit</span>
+                            <span>Pandas</span>
                         </div>
                         <div class="project-links">
-                            <a href="#"><i class="fab fa-github"></i> Code</a>
-                            <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/mounishmesa/mounishmesa.github.io/tree/main/projects/ftse-analysis" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://mounishmesaappio-vjcsjtrndrnuxd9bejncdq.streamlit.app" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                         </div>
                     </div>
                 </div>
@@ -894,6 +1027,25 @@
     </footer>
 
     <script>
+        // Dashboard tab switching
+        function showDashboard(type) {
+            // Hide all panels
+            document.querySelectorAll('.dashboard-panel').forEach(panel => {
+                panel.classList.remove('active');
+            });
+            
+            // Remove active from all tabs
+            document.querySelectorAll('.dashboard-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show selected panel
+            document.getElementById(type + '-panel').classList.add('active');
+            
+            // Activate clicked tab
+            event.target.classList.add('active');
+        }
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
