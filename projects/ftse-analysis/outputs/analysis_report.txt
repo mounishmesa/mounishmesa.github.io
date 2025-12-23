@@ -1,0 +1,67 @@
+======================================================================
+FTSE 100 STOCK ANALYSIS REPORT
+Generated: 2025-12-23 14:11
+======================================================================
+
+----------------------------------------------------------------------
+MARKET OVERVIEW
+----------------------------------------------------------------------
+FTSE 100 Index 1-Year Return: 21.22%
+FTSE 100 Index Volatility: 0.68
+Stocks Analyzed: 30
+Sectors Covered: 11
+
+----------------------------------------------------------------------
+TOP PERFORMERS (1-YEAR RETURN)
+----------------------------------------------------------------------
+  Rolls-Royce               +99.90%  (Industrials)
+  Standard Chartered        +80.92%  (Financials)
+  Barclays                  +78.49%  (Financials)
+  Lloyds                    +78.36%  (Financials)
+  NatWest                   +60.26%  (Financials)
+
+----------------------------------------------------------------------
+BOTTOM PERFORMERS (1-YEAR RETURN)
+----------------------------------------------------------------------
+  Diageo                    -35.75%  (Consumer Goods)
+  London Stock Exchange     -21.46%  (Financials)
+  RELX                      -15.94%  (Industrials)
+  JD Sports                 -11.79%  (Retail)
+  Compass Group             -9.32%  (Services)
+
+----------------------------------------------------------------------
+SECTOR PERFORMANCE (1-YEAR)
+----------------------------------------------------------------------
+  Financials           Return: +54.58%  Volatility: 1.64
+  Industrials          Return: +43.30%  Volatility: 1.66
+  Telecom              Return: +35.32%  Volatility: 1.69
+  Healthcare           Return: +33.58%  Volatility: 1.49
+  Utilities            Return: +27.09%  Volatility: 1.41
+  Mining               Return: +21.49%  Volatility: 1.85
+  Energy               Return: +11.63%  Volatility: 1.36
+  Retail               Return: +8.75%  Volatility: 1.87
+  Consumer Goods       Return: +8.73%  Volatility: 1.34
+  Real Estate          Return: +7.08%  Volatility: 1.44
+  Services             Return: -9.32%  Volatility: 1.16
+
+----------------------------------------------------------------------
+MOST VOLATILE STOCKS
+----------------------------------------------------------------------
+  JD Sports                 Volatility: 2.91  (Retail)
+  Anglo American            Volatility: 2.29  (Mining)
+  Rolls-Royce               Volatility: 2.06  (Industrials)
+  Barclays                  Volatility: 1.89  (Financials)
+  Glencore                  Volatility: 1.89  (Mining)
+
+----------------------------------------------------------------------
+MOST STABLE STOCKS
+----------------------------------------------------------------------
+  Unilever                  Volatility: 1.06  (Consumer Goods)
+  Compass Group             Volatility: 1.16  (Services)
+  RELX                      Volatility: 1.16  (Industrials)
+  Shell                     Volatility: 1.20  (Energy)
+  Tesco                     Volatility: 1.27  (Retail)
+
+======================================================================
+END OF REPORT
+======================================================================
