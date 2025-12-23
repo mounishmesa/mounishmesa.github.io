@@ -42,7 +42,7 @@ st.markdown("""
         text-align: center;
         margin-bottom: 2rem;
     }
-    /* Fix metric cards */
+    /* metric cards */
     [data-testid="stMetric"] {
         background-color: #f0f4f8;
         padding: 1rem;
@@ -54,7 +54,7 @@ st.markdown("""
     }
     [data-testid="stMetricValue"] {
         color: #1e3a5f !important;
-        font-weight: 700;
+        font-weight: 300;
     }
 </style>
 """, unsafe_allow_html=True)
