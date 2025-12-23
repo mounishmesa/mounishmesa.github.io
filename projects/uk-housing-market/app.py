@@ -12,7 +12,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
-import sqlite3
+import os
 
 # =============================================================================
 # PAGE CONFIGURATION
@@ -63,22 +63,29 @@ st.markdown("""
 @st.cache_data
 def load_data():
     """Load data from CSV file."""
+    # Get the directory where this script is located
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    
     # Try different file locations
-    try:
-        df = pd.read_csv('data/london_housing_sample.csv')
-    except:
+    file_paths = [
+        os.path.join(current_dir, 'data', 'london_housing_sample.csv'),
+        os.path.join(current_dir, 'data', 'processed', 'london_housing_cleaned.csv'),
+        os.path.join(current_dir, 'london_housing_sample.csv'),
+        'data/london_housing_sample.csv',
+        'london_housing_sample.csv'
+    ]
+    
+    df = None
+    for path in file_paths:
         try:
-            df = pd.read_csv('data/processed/london_housing_cleaned.csv')
+            df = pd.read_csv(path)
+            break
         except:
-            df = pd.read_csv('london_housing_sample.csv')
+            continue
     
-    # Convert date
-    df['date_of_transfer'] = pd.to_datetime(df['date_of_transfer'])
-    df['year'] = df['date_of_transfer'].dt.year
-    df['month'] = df['date_of_transfer'].dt.month
-    df['month_name'] = df['date_of_transfer'].dt.strftime('%B')
-    
-    return df
+    if df is None:
+        st.error("Could not find data file. Please check the data folder.")
+        st.stop()
     
     # Convert date
     df['date_of_transfer'] = pd.to_datetime(df['date_of_transfer'])
