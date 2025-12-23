@@ -45,7 +45,7 @@ st.markdown("""
     /* metric cards */
     [data-testid="stMetric"] {
         background-color: #f0f4f8;
-        padding: 0.5rem;
+        padding: 0.1rem;
         border-radius: 10px;
         border: 1px solid #e2e8f0;
     }
