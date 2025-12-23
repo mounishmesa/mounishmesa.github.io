@@ -42,17 +42,19 @@ st.markdown("""
         text-align: center;
         margin-bottom: 2rem;
     }
-    .metric-card {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        padding: 1rem;
-        border-radius: 10px;
-        color: white;
-    }
-    .stMetric {
-        background-color: #f8fafc;
+    /* Fix metric cards */
+    [data-testid="stMetric"] {
+        background-color: #f0f4f8;
         padding: 1rem;
         border-radius: 10px;
         border: 1px solid #e2e8f0;
+    }
+    [data-testid="stMetricLabel"] {
+        color: #334155 !important;
+    }
+    [data-testid="stMetricValue"] {
+        color: #1e3a5f !important;
+        font-weight: 700;
     }
 </style>
 """, unsafe_allow_html=True)
