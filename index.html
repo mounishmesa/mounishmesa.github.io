@@ -314,6 +314,7 @@
             justify-content: center;
             gap: 1rem;
             margin-bottom: 2rem;
+            flex-wrap: wrap;
         }
 
         .dashboard-tab {
@@ -367,6 +368,10 @@
             background: linear-gradient(135deg, #065f46 0%, #10b981 100%);
         }
 
+        .dashboard-header.cost-of-living {
+            background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+        }
+
         .dashboard-header h3 {
             color: var(--white);
             font-size: 1.25rem;
@@ -387,6 +392,11 @@
 
         .dashboard-header.ftse .live-badge {
             background: #fbbf24;
+            color: #1a1a2e;
+        }
+
+        .dashboard-header.cost-of-living .live-badge {
+            background: #f472b6;
             color: #1a1a2e;
         }
 
@@ -700,16 +710,16 @@
                             <div class="stat-label">Years Experience</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number">323K+</div>
+                            <div class="stat-number">325K+</div>
                             <div class="stat-label">Records Analysed</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number">2</div>
+                            <div class="stat-number">3</div>
                             <div class="stat-label">Live Dashboards</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-number">Distinction</div>
-                            <div class="stat-label">MSc Classification</div>
+                            <div class="stat-label">MSc Grade</div>
                         </div>
                     </div>
                 </div>
@@ -773,7 +783,7 @@
         <div class="section-container">
             <div class="section-header">
                 <h2>📊 Live Interactive Dashboards</h2>
-                <p>Real-time data visualizations showcasing UK housing market and FTSE 100 stock analysis</p>
+                <p>Real-time data visualizations showcasing UK housing, stock market, and cost of living analysis</p>
             </div>
 
             <!-- Dashboard Tabs -->
@@ -783,6 +793,9 @@
                 </button>
                 <button class="dashboard-tab" onclick="showDashboard('ftse')">
                     <i class="fas fa-chart-line"></i> FTSE 100 Stocks
+                </button>
+                <button class="dashboard-tab" onclick="showDashboard('cost-of-living')">
+                    <i class="fas fa-pound-sign"></i> Cost of Living
                 </button>
             </div>
 
@@ -829,6 +842,28 @@
                     </iframe>
                 </div>
             </div>
+
+            <!-- Cost of Living Dashboard -->
+            <div id="cost-of-living-panel" class="dashboard-panel">
+                <div class="dashboard-container">
+                    <div class="dashboard-header cost-of-living">
+                        <h3>
+                            <i class="fas fa-pound-sign"></i>
+                            UK Cost of Living Analysis
+                            <span class="live-badge">● LIVE</span>
+                        </h3>
+                        <a href="https://mounishmesaappio-7wbaghdlcjkbiruarqwkd.streamlit.app" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            Open Full Screen
+                        </a>
+                    </div>
+                    <iframe 
+                        class="dashboard-iframe"
+                        src="https://mounishmesaappio-7wbaghdlcjkbiruarqwkd.streamlit.app?embedded=true"
+                        title="UK Cost of Living Analysis Dashboard">
+                    </iframe>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -840,7 +875,7 @@
                 <p>UK-focused financial and economic data analysis showcasing end-to-end analytical capabilities</p>
             </div>
             <div class="projects-grid">
-                <!-- Featured Project 1: UK Housing -->
+                <!-- Project 1: UK Housing -->
                 <div class="project-card">
                     <div class="project-image" style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);">
                         <i class="fas fa-home"></i>
@@ -871,7 +906,7 @@
                     </div>
                 </div>
 
-                <!-- Featured Project 2: FTSE 100 -->
+                <!-- Project 2: FTSE 100 -->
                 <div class="project-card">
                     <div class="project-image" style="background: linear-gradient(135deg, #065f46 0%, #10b981 100%);">
                         <i class="fas fa-chart-line"></i>
@@ -902,24 +937,33 @@
                     </div>
                 </div>
 
-                <!-- Project 3 -->
+                <!-- Project 3: Cost of Living - NOW COMPLETED -->
                 <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #9333ea 0%, #c084fc 100%);">
+                    <div class="project-image" style="background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);">
                         <i class="fas fa-pound-sign"></i>
-                        <span class="project-status">Coming Soon</span>
+                        <span class="project-status completed">✓ Completed</span>
                     </div>
                     <div class="project-content">
                         <h3>UK Cost of Living Analysis</h3>
-                        <p>ONS data analysis examining inflation trends, regional variations, and purchasing power changes across the UK.</p>
+                        <p>ONS data analysis examining inflation trends from 1989-2024, regional price variations, and purchasing power changes across the UK.</p>
+                        <div class="key-findings">
+                            <h4>Key Findings:</h4>
+                            <ul>
+                                <li>Peak inflation: 11.1% (Oct 2022)</li>
+                                <li>Current CPI: 3.2% (still above target)</li>
+                                <li>London 17% above UK average</li>
+                            </ul>
+                        </div>
                         <div class="project-tech">
-                            <span>Excel</span>
+                            <span>Python</span>
                             <span>SQL</span>
-                            <span>Power BI</span>
-                            <span>DAX</span>
+                            <span>Plotly</span>
+                            <span>Streamlit</span>
+                            <span>ONS API</span>
                         </div>
                         <div class="project-links">
-                            <a href="#"><i class="fab fa-github"></i> Code</a>
-                            <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/mounishmesa/mounishmesa.github.io/tree/main/projects/cost-of-living" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://mounishmesaappio-7wbaghdlcjkbiruarqwkd.streamlit.app" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                         </div>
                     </div>
                 </div>
@@ -928,7 +972,7 @@
                 <div class="project-card">
                     <div class="project-image" style="background: linear-gradient(135deg, #dc2626 0%, #f87171 100%);">
                         <i class="fas fa-users"></i>
-                        <span class="project-status">Coming Soon</span>
+                        <span class="project-status">In Progress</span>
                     </div>
                     <div class="project-content">
                         <h3>Bank Customer Segmentation</h3>
@@ -1043,7 +1087,7 @@
             document.getElementById(type + '-panel').classList.add('active');
             
             // Activate clicked tab
-            event.target.classList.add('active');
+            event.target.closest('.dashboard-tab').classList.add('active');
         }
 
         // Smooth scrolling for navigation links
