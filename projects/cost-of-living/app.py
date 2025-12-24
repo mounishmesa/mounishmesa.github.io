@@ -65,11 +65,30 @@ st.markdown("""
 @st.cache_data
 def load_data():
     """Load data from CSV files"""
-    # Determine the correct path
-    if os.path.exists('data/processed/master_cpi_data.csv'):
-        base_path = 'data/processed'
-    else:
-        base_path = '../data/processed'
+    # Get the directory where app.py is located
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    
+    # Try multiple possible paths
+    possible_paths = [
+        os.path.join(current_dir, 'data', 'processed'),  # Same folder as app.py
+        os.path.join(current_dir, '..', 'data', 'processed'),  # Parent folder
+        'data/processed',  # Relative path
+        '../data/processed',  # Relative parent
+    ]
+    
+    # Find the correct path
+    base_path = None
+    for path in possible_paths:
+        test_file = os.path.join(path, 'master_cpi_data.csv')
+        if os.path.exists(test_file):
+            base_path = path
+            break
+    
+    if base_path is None:
+        st.error(f"Data files not found. Searched in: {possible_paths}")
+        st.error(f"Current directory: {current_dir}")
+        st.error(f"Files in current dir: {os.listdir(current_dir) if os.path.exists(current_dir) else 'N/A'}")
+        return {}
     
     data = {}
     
@@ -90,8 +109,9 @@ def load_data():
         data['wages'] = pd.read_csv(wages_path)
         data['wages']['date'] = pd.to_datetime(data['wages']['date'])
     
-    # Load basket data from raw (it's already clean)
-    basket_path = os.path.join(base_path.replace('processed', 'raw'), 'basket_of_goods.csv')
+    # Load basket data from raw
+    raw_path = base_path.replace('processed', 'raw')
+    basket_path = os.path.join(raw_path, 'basket_of_goods.csv')
     if os.path.exists(basket_path):
         data['basket'] = pd.read_csv(basket_path)
     
