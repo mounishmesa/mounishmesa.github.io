@@ -1,0 +1,40 @@
+============================================================
+UK COST OF LIVING ANALYSIS REPORT
+Generated: 2025-12-24 11:41:58
+============================================================
+
+📊 CURRENT STATE (as of November 2025)
+----------------------------------------
+CPI Annual Rate: 3.2%
+CPIH Annual Rate: 3.5%
+Inflation Regime: Elevated
+Distance from BOE Target: 1.2pp
+
+📈 2024 YEAR-TO-DATE
+----------------------------------------
+Average CPI: 2.6%
+Peak: 4.0% (January)
+Low: 1.7% (September)
+
+🔺 HISTORICAL PEAK
+----------------------------------------
+Peak CPI: 11.1%
+Date: October 2022
+
+🗺️ REGIONAL SUMMARY (2023)
+----------------------------------------
+Most Expensive: London (Index: 117)
+Most Affordable: North East (Index: 94)
+London Premium: 17% above UK average
+
+💡 KEY INSIGHTS
+----------------------------------------
+• UK inflation has fallen significantly from 2022 peak (>11%) to ~3%
+• Still above BOE 2% target but trending toward normalization
+• Housing & Energy were primary drivers of 2022-23 crisis
+• London remains ~15% more expensive than UK average
+• North-South divide persists in cost of living
+
+============================================================
+END OF REPORT
+============================================================

@@ -1,0 +1,151 @@
+year,item,category,average_price,unit
+2015,Bread (800g white loaf),Food,1.08,GBP
+2015,Milk (4 pints),Food,1.37,GBP
+2015,Eggs (12 large),Food,2.21,GBP
+2015,Butter (250g),Food,1.78,GBP
+2015,Cheese (500g cheddar),Food,3.43,GBP
+2015,Chicken breast (1kg),Food,6.24,GBP
+2015,Beef mince (500g),Food,4.03,GBP
+2015,Petrol (litre),Transport,1.11,GBP
+2015,Diesel (litre),Transport,1.18,GBP
+2015,Electricity (kWh),Energy,0.14,GBP
+2015,Gas (kWh),Energy,0.04,GBP
+2015,Cinema ticket,Recreation,10.44,GBP
+2015,Pint of beer (pub),Alcohol,3.58,GBP
+2015,Coffee (cafe),Restaurants,2.84,GBP
+2015,Gym membership (monthly),Recreation,35.23,GBP
+2016,Bread (800g white loaf),Food,1.13,GBP
+2016,Milk (4 pints),Food,1.4,GBP
+2016,Eggs (12 large),Food,2.19,GBP
+2016,Butter (250g),Food,1.87,GBP
+2016,Cheese (500g cheddar),Food,3.63,GBP
+2016,Chicken breast (1kg),Food,6.53,GBP
+2016,Beef mince (500g),Food,4.08,GBP
+2016,Petrol (litre),Transport,1.18,GBP
+2016,Diesel (litre),Transport,1.21,GBP
+2016,Electricity (kWh),Energy,0.14,GBP
+2016,Gas (kWh),Energy,0.04,GBP
+2016,Cinema ticket,Recreation,10.99,GBP
+2016,Pint of beer (pub),Alcohol,3.6,GBP
+2016,Coffee (cafe),Restaurants,2.9,GBP
+2016,Gym membership (monthly),Recreation,36.81,GBP
+2017,Bread (800g white loaf),Food,1.16,GBP
+2017,Milk (4 pints),Food,1.45,GBP
+2017,Eggs (12 large),Food,2.4,GBP
+2017,Butter (250g),Food,1.93,GBP
+2017,Cheese (500g cheddar),Food,3.69,GBP
+2017,Chicken breast (1kg),Food,6.96,GBP
+2017,Beef mince (500g),Food,4.21,GBP
+2017,Petrol (litre),Transport,1.21,GBP
+2017,Diesel (litre),Transport,1.23,GBP
+2017,Electricity (kWh),Energy,0.15,GBP
+2017,Gas (kWh),Energy,0.04,GBP
+2017,Cinema ticket,Recreation,11.35,GBP
+2017,Pint of beer (pub),Alcohol,3.82,GBP
+2017,Coffee (cafe),Restaurants,2.86,GBP
+2017,Gym membership (monthly),Recreation,37.01,GBP
+2018,Bread (800g white loaf),Food,1.14,GBP
+2018,Milk (4 pints),Food,1.47,GBP
+2018,Eggs (12 large),Food,2.4,GBP
+2018,Butter (250g),Food,1.91,GBP
+2018,Cheese (500g cheddar),Food,3.77,GBP
+2018,Chicken breast (1kg),Food,7.24,GBP
+2018,Beef mince (500g),Food,4.26,GBP
+2018,Petrol (litre),Transport,1.21,GBP
+2018,Diesel (litre),Transport,1.3,GBP
+2018,Electricity (kWh),Energy,0.16,GBP
+2018,Gas (kWh),Energy,0.04,GBP
+2018,Cinema ticket,Recreation,11.5,GBP
+2018,Pint of beer (pub),Alcohol,3.97,GBP
+2018,Coffee (cafe),Restaurants,2.97,GBP
+2018,Gym membership (monthly),Recreation,37.29,GBP
+2019,Bread (800g white loaf),Food,1.24,GBP
+2019,Milk (4 pints),Food,1.53,GBP
+2019,Eggs (12 large),Food,2.44,GBP
+2019,Butter (250g),Food,1.95,GBP
+2019,Cheese (500g cheddar),Food,3.99,GBP
+2019,Chicken breast (1kg),Food,7.08,GBP
+2019,Beef mince (500g),Food,4.37,GBP
+2019,Petrol (litre),Transport,1.27,GBP
+2019,Diesel (litre),Transport,1.33,GBP
+2019,Electricity (kWh),Energy,0.16,GBP
+2019,Gas (kWh),Energy,0.04,GBP
+2019,Cinema ticket,Recreation,11.65,GBP
+2019,Pint of beer (pub),Alcohol,3.96,GBP
+2019,Coffee (cafe),Restaurants,3.11,GBP
+2019,Gym membership (monthly),Recreation,36.73,GBP
+2020,Bread (800g white loaf),Food,1.23,GBP
+2020,Milk (4 pints),Food,1.53,GBP
+2020,Eggs (12 large),Food,2.42,GBP
+2020,Butter (250g),Food,2.04,GBP
+2020,Cheese (500g cheddar),Food,3.92,GBP
+2020,Chicken breast (1kg),Food,7.54,GBP
+2020,Beef mince (500g),Food,4.63,GBP
+2020,Petrol (litre),Transport,1.28,GBP
+2020,Diesel (litre),Transport,1.32,GBP
+2020,Electricity (kWh),Energy,0.16,GBP
+2020,Gas (kWh),Energy,0.04,GBP
+2020,Cinema ticket,Recreation,11.85,GBP
+2020,Pint of beer (pub),Alcohol,4.0,GBP
+2020,Coffee (cafe),Restaurants,3.09,GBP
+2020,Gym membership (monthly),Recreation,39.81,GBP
+2021,Bread (800g white loaf),Food,1.28,GBP
+2021,Milk (4 pints),Food,1.53,GBP
+2021,Eggs (12 large),Food,2.57,GBP
+2021,Butter (250g),Food,2.05,GBP
+2021,Cheese (500g cheddar),Food,4.04,GBP
+2021,Chicken breast (1kg),Food,7.58,GBP
+2021,Beef mince (500g),Food,4.6,GBP
+2021,Petrol (litre),Transport,1.33,GBP
+2021,Diesel (litre),Transport,1.34,GBP
+2021,Electricity (kWh),Energy,0.16,GBP
+2021,Gas (kWh),Energy,0.05,GBP
+2021,Cinema ticket,Recreation,11.92,GBP
+2021,Pint of beer (pub),Alcohol,4.13,GBP
+2021,Coffee (cafe),Restaurants,3.13,GBP
+2021,Gym membership (monthly),Recreation,39.91,GBP
+2022,Bread (800g white loaf),Food,1.34,GBP
+2022,Milk (4 pints),Food,1.65,GBP
+2022,Eggs (12 large),Food,2.69,GBP
+2022,Butter (250g),Food,2.21,GBP
+2022,Cheese (500g cheddar),Food,4.33,GBP
+2022,Chicken breast (1kg),Food,8.09,GBP
+2022,Beef mince (500g),Food,4.86,GBP
+2022,Petrol (litre),Transport,1.32,GBP
+2022,Diesel (litre),Transport,1.36,GBP
+2022,Electricity (kWh),Energy,0.18,GBP
+2022,Gas (kWh),Energy,0.05,GBP
+2022,Cinema ticket,Recreation,12.18,GBP
+2022,Pint of beer (pub),Alcohol,4.14,GBP
+2022,Coffee (cafe),Restaurants,3.26,GBP
+2022,Gym membership (monthly),Recreation,41.25,GBP
+2023,Bread (800g white loaf),Food,1.4,GBP
+2023,Milk (4 pints),Food,1.69,GBP
+2023,Eggs (12 large),Food,2.75,GBP
+2023,Butter (250g),Food,2.23,GBP
+2023,Cheese (500g cheddar),Food,4.41,GBP
+2023,Chicken breast (1kg),Food,8.08,GBP
+2023,Beef mince (500g),Food,5.09,GBP
+2023,Petrol (litre),Transport,1.34,GBP
+2023,Diesel (litre),Transport,1.41,GBP
+2023,Electricity (kWh),Energy,0.18,GBP
+2023,Gas (kWh),Energy,0.05,GBP
+2023,Cinema ticket,Recreation,13.17,GBP
+2023,Pint of beer (pub),Alcohol,4.35,GBP
+2023,Coffee (cafe),Restaurants,3.3,GBP
+2023,Gym membership (monthly),Recreation,41.93,GBP
+2024,Bread (800g white loaf),Food,1.38,GBP
+2024,Milk (4 pints),Food,1.74,GBP
+2024,Eggs (12 large),Food,2.81,GBP
+2024,Butter (250g),Food,2.36,GBP
+2024,Cheese (500g cheddar),Food,4.49,GBP
+2024,Chicken breast (1kg),Food,8.39,GBP
+2024,Beef mince (500g),Food,5.12,GBP
+2024,Petrol (litre),Transport,1.45,GBP
+2024,Diesel (litre),Transport,1.44,GBP
+2024,Electricity (kWh),Energy,0.19,GBP
+2024,Gas (kWh),Energy,0.05,GBP
+2024,Cinema ticket,Recreation,12.96,GBP
+2024,Pint of beer (pub),Alcohol,4.44,GBP
+2024,Coffee (cafe),Restaurants,3.45,GBP
+2024,Gym membership (monthly),Recreation,41.53,GBP
