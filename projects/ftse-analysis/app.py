@@ -10,6 +10,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from datetime import datetime, timedelta
+import os
 
 # Page config
 st.set_page_config(
@@ -51,14 +52,17 @@ st.markdown("""
 @st.cache_data
 def load_data():
     """Load stock data"""
-    df = pd.read_csv('data/ftse_stock_data_raw.csv')
+    # Get the directory where app.py is located
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    df = pd.read_csv(os.path.join(current_dir, 'data/ftse_stock_data_raw.csv'))
     df['Date'] = pd.to_datetime(df['Date'], utc=True).dt.tz_localize(None)
     return df
 
 @st.cache_data
 def load_performance():
     """Load performance metrics"""
-    return pd.read_csv('outputs/stock_performance.csv')
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    return pd.read_csv(os.path.join(current_dir, 'outputs/stock_performance.csv'))
 
 def format_return(value):
     """Format return with color"""

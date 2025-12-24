@@ -35,7 +35,11 @@ An in-depth analysis of UK inflation trends, regional price variations, and purc
 ## 🗂️ Project Structure
 
 ```
+<<<<<<< HEAD
 cost-of-living/
+=======
+uk-cost-of-living/
+>>>>>>> 12994ae572b83e1cdbb911d822568b6576ba9f8b
 ├── README.md                    # This file
 ├── app.py                       # Streamlit dashboard
 ├── requirements.txt             # Python dependencies
@@ -279,4 +283,8 @@ This project uses publicly available data under the [Open Government Licence v3.
 
 ---
 
+<<<<<<< HEAD
 *Last Updated: December 2024*
+=======
+*Last Updated: December 2024*
+>>>>>>> 12994ae572b83e1cdbb911d822568b6576ba9f8b

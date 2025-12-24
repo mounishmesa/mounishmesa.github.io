@@ -1,5 +1,15 @@
+<<<<<<< HEAD
 streamlit==1.29.0
 pandas==2.1.0
 numpy==1.24.0
 plotly==5.18.0
 yfinance==0.2.33
+=======
+streamlit
+pandas
+numpy
+plotly
+yfinance
+matplotlib
+seaborn
+>>>>>>> 12994ae572b83e1cdbb911d822568b6576ba9f8b
