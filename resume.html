@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Mounish Mesa - Data Analyst</title>
+    <meta name="description" content="View and download the resume of Mounish Mesa - Data Analyst with expertise in Python, SQL, and Power BI.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <style>
+        /* Resume Page Specific Styles */
+        .resume-hero {
+            padding: 8rem 2rem 4rem;
+            background: var(--gradient);
+            text-align: center;
+        }
+
+        .resume-hero h1 {
+            font-size: 3rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .resume-hero p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .download-buttons .btn {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        .download-buttons .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .download-buttons .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .download-buttons .btn-outline:hover {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        /* Resume Content */
+        .resume-content {
+            padding: 4rem 2rem;
+            background: var(--background);
+        }
+
+        .resume-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .resume-section {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border);
+        }
+
+        .resume-section h2 {
+            color: var(--secondary);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .resume-section h2 i {
+            color: var(--primary);
+        }
+
+        /* Contact Info */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--text);
+        }
+
+        .contact-info-item i {
+            color: var(--primary);
+            width: 20px;
+        }
+
+        .contact-info-item a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .contact-info-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Summary */
+        .summary-text {
+            color: var(--text);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        /* Experience & Education Items */
+        .resume-item {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .resume-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .resume-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .resume-item h3 {
+            font-size: 1.1rem;
+            color: var(--secondary);
+            margin-bottom: 0.25rem;
+        }
+
+        .resume-item .company,
+        .resume-item .school {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .resume-item .location {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .resume-item .date {
+            background: var(--background);
+            color: var(--text-light);
+            padding: 0.375rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            white-space: nowrap;
+        }
+
+        .resume-item ul {
+            color: var(--text);
+            margin-left: 1.25rem;
+            margin-top: 0.75rem;
+        }
+
+        .resume-item li {
+            margin-bottom: 0.5rem;
+        }
+
+        .resume-item .grade {
+            display: inline-block;
+            background: var(--success);
+            color: var(--white);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        /* Skills Grid */
+        .skills-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-category h4 {
+            color: var(--secondary);
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+        }
+
+        .skill-category .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-category .tag {
+            background: var(--background);
+            color: var(--primary);
+            padding: 0.375rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Print Styles */
+        @media print {
+            nav, footer, .resume-hero .download-buttons {
+                display: none;
+            }
+
+            .resume-hero {
+                padding: 2rem;
+                background: var(--white);
+            }
+
+            .resume-hero h1 {
+                color: var(--secondary);
+            }
+
+            .resume-hero p {
+                color: var(--text);
+            }
+
+            .resume-section {
+                break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .resume-hero h1 {
+                font-size: 2rem;
+            }
+
+            .resume-item-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Mounish<span>Mesa</span></a>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html" class="active">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Resume Hero -->
+    <section class="resume-hero">
+        <h1>My Resume</h1>
+        <p>Data Analyst with 2+ years of experience in business intelligence, automation, and UK financial data analysis</p>
+        <div class="download-buttons">
+            <a href="assets/docs/Mounish_Mesa_CV.pdf" download class="btn">
+                <i class="fas fa-download"></i> Download PDF
+            </a>
+            <button onclick="window.print()" class="btn btn-outline">
+                <i class="fas fa-print"></i> Print Resume
+            </button>
+        </div>
+    </section>
+
+    <!-- Resume Content -->
+    <section class="resume-content">
+        <div class="resume-container">
+            <!-- Contact Information -->
+            <div class="resume-section">
+                <h2><i class="fas fa-address-card"></i> Contact Information</h2>
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <i class="fas fa-user"></i>
+                        <span>Mounish Mesa</span>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>London, UK</span>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:mounicar9496@gmail.com">mounicar9496@gmail.com</a>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+447557944685">+44 7557 944685</a>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/mounish-jm/" target="_blank">linkedin.com/in/mounish-jm</a>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/mounishmesa" target="_blank">github.com/mounishmesa</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Summary -->
+            <div class="resume-section">
+                <h2><i class="fas fa-user-tie"></i> Professional Summary</h2>
+                <p class="summary-text">
+                    Results-driven Data Analyst with 2+ years of experience specialising in UK financial data analysis, business intelligence, and automation. Proven track record of analysing over 1M+ records and creating impactful dashboards that drive data-informed decision making. MSc in International Project Management with Distinction from Coventry University. Seeking opportunities to leverage my expertise in Python, SQL, and Power BI to deliver actionable insights for UK-based organisations.
+                </p>
+            </div>
+
+            <!-- Technical Skills -->
+            <div class="resume-section">
+                <h2><i class="fas fa-code"></i> Technical Skills</h2>
+                <div class="skills-list">
+                    <div class="skill-category">
+                        <h4>Data Analysis & Programming</h4>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">NumPy</span>
+                            <span class="tag">SQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Business Intelligence</h4>
+                        <div class="tags">
+                            <span class="tag">Power BI</span>
+                            <span class="tag">DAX</span>
+                            <span class="tag">Excel</span>
+                            <span class="tag">Streamlit</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Data Visualisation</h4>
+                        <div class="tags">
+                            <span class="tag">Plotly</span>
+                            <span class="tag">Matplotlib</span>
+                            <span class="tag">Seaborn</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>AI & Machine Learning</h4>
+                        <div class="tags">
+                            <span class="tag">Scikit-learn</span>
+                            <span class="tag">LangChain</span>
+                            <span class="tag">OpenAI API</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Databases</h4>
+                        <div class="tags">
+                            <span class="tag">MSSQL</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Automation</h4>
+                        <div class="tags">
+                            <span class="tag">Power Automate</span>
+                            <span class="tag">Make.com</span>
+                            <span class="tag">Python Scripts</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Experience -->
+            <div class="resume-section">
+                <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
+
+                <div class="resume-item">
+                    <div class="resume-item-header">
+                        <div>
+                            <h3>Business Analyst Intern</h3>
+                            <p class="company">The Creations Club</p>
+                            <p class="location">London, UK</p>
+                        </div>
+                        <span class="date">Oct 2023 - Apr 2024</span>
+                    </div>
+                    <ul>
+                        <li>Created automated data extraction processes using Python, reducing manual work by 20% and improving data accuracy</li>
+                        <li>Developed comprehensive Power BI dashboards for KPI monitoring and executive reporting</li>
+                        <li>Conducted market analysis supporting strategic business initiatives and expansion planning</li>
+                        <li>Collaborated with cross-functional teams to gather requirements and deliver actionable insights</li>
+                        <li>Presented data-driven recommendations to stakeholders, influencing key business decisions</li>
+                    </ul>
+                </div>
+
+                <div class="resume-item">
+                    <div class="resume-item-header">
+                        <div>
+                            <h3>Transportation Specialist</h3>
+                            <p class="company">Amazon</p>
+                            <p class="location">Hyderabad, India</p>
+                        </div>
+                        <span class="date">Nov 2021 - Jan 2023</span>
+                    </div>
+                    <ul>
+                        <li>Analysed 1M+ records for operational reporting and performance optimisation</li>
+                        <li>Built automated reports and interactive dashboards in Power BI for logistics tracking</li>
+                        <li>Developed SQL-based solutions for data transformation and ETL processes</li>
+                        <li>Improved operational efficiency by 15% through data-driven recommendations</li>
+                        <li>Collaborated with teams across multiple regions to standardise reporting processes</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="resume-section">
+                <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+
+                <div class="resume-item">
+                    <div class="resume-item-header">
+                        <div>
+                            <h3>MSc International Project Management</h3>
+                            <p class="school">Coventry University</p>
+                            <p class="location">Coventry, UK</p>
+                        </div>
+                        <span class="date">2023 - 2024</span>
+                    </div>
+                    <span class="grade">Distinction</span>
+                    <ul>
+                        <li>Dissertation: "Investigating the impact of UX design on customer satisfaction and loyalty in e-commerce"</li>
+                        <li>Modules: Project Management, Business Analytics, Strategic Management, Risk Management</li>
+                    </ul>
+                </div>
+
+                <div class="resume-item">
+                    <div class="resume-item-header">
+                        <div>
+                            <h3>BVoc Travel Management</h3>
+                            <p class="school">Central University of Andhra Pradesh</p>
+                            <p class="location">India</p>
+                        </div>
+                        <span class="date">2018 - 2021</span>
+                    </div>
+                    <span class="grade">Grade A</span>
+                    <ul>
+                        <li>Developed foundational skills in business operations, customer service, and data management</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Projects -->
+            <div class="resume-section">
+                <h2><i class="fas fa-project-diagram"></i> Key Projects</h2>
+
+                <div class="resume-item">
+                    <div class="resume-item-header">
+                        <div>
+                            <h3>UK Housing Market Analysis</h3>
+                            <p class="company">Python, SQL, Power BI, Streamlit</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Analysed 307,584 HM Land Registry property transactions across 33 London boroughs</li>
+                        <li>Built interactive Streamlit dashboard with real-time filtering and visualisations</li>
+                        <li>Identified 6.4x price gap between highest and lowest priced boroughs</li>
+                    </ul>
+                </div>
+
+                <div class="resume-item">
+                    <div class="resume-item-header">
+                        <div>
+                            <h3>FTSE 100 Stock Analysis</h3>
+                            <p class="company">Python, yfinance, Plotly, Streamlit</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Developed real-time stock analysis dashboard for top 30 FTSE 100 companies</li>
+                        <li>Implemented sector performance tracking and volatility metrics</li>
+                        <li>Created automated data pipeline using yfinance API</li>
+                    </ul>
+                </div>
+
+                <div class="resume-item">
+                    <div class="resume-item-header">
+                        <div>
+                            <h3>UK Cost of Living Analysis</h3>
+                            <p class="company">Python, SQL, ONS API, Streamlit</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Analysed ONS Consumer Price Index data from 1989-2024</li>
+                        <li>Identified peak inflation of 11.1% in October 2022 and regional price variations</li>
+                        <li>Created interactive dashboard comparing wages vs inflation trends</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Mounish Mesa. Built with passion for data. | <a href="mailto:mounicar9496@gmail.com">mounicar9496@gmail.com</a></p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

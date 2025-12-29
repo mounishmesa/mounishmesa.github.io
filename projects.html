@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Mounish Mesa - Data Analyst Portfolio</title>
+    <meta name="description" content="Explore data analysis projects by Mounish Mesa - UK Housing Market, FTSE 100 Analysis, Cost of Living, and more.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <style>
+        /* Projects Page Specific Styles */
+        .projects-hero {
+            padding: 8rem 2rem 4rem;
+            background: linear-gradient(180deg, var(--white) 0%, var(--background) 100%);
+            text-align: center;
+        }
+
+        .projects-hero h1 {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .projects-hero h1 span {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .projects-hero p {
+            color: var(--text-light);
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Live Dashboards Section */
+        .live-dashboards {
+            padding: 6rem 2rem;
+            background: var(--secondary);
+        }
+
+        .live-dashboards .section-header h2 {
+            color: var(--white);
+        }
+
+        .live-dashboards .section-header p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* All Projects Section */
+        .all-projects {
+            padding: 6rem 2rem;
+            background: var(--background);
+        }
+
+        /* Project Card Enhancements */
+        .project-card.featured .project-image {
+            height: 250px;
+        }
+
+        @media (max-width: 968px) {
+            .projects-hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Mounish<span>Mesa</span></a>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Projects Hero -->
+    <section class="projects-hero">
+        <h1>My <span>Projects</span></h1>
+        <p>UK-focused financial and economic data analysis showcasing end-to-end analytical capabilities</p>
+    </section>
+
+    <!-- Live Dashboards Section -->
+    <section class="live-dashboards">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Live Interactive Dashboards</h2>
+                <p>Real-time data visualizations showcasing UK housing, stock market, and cost of living analysis</p>
+            </div>
+
+            <!-- Dashboard Tabs -->
+            <div class="dashboard-tabs">
+                <button class="dashboard-tab active" onclick="showDashboard('housing')">
+                    <i class="fas fa-home"></i> Housing Market
+                </button>
+                <button class="dashboard-tab" onclick="showDashboard('ftse')">
+                    <i class="fas fa-chart-line"></i> FTSE 100 Stocks
+                </button>
+                <button class="dashboard-tab" onclick="showDashboard('cost-of-living')">
+                    <i class="fas fa-pound-sign"></i> Cost of Living
+                </button>
+            </div>
+
+            <!-- Housing Dashboard -->
+            <div id="housing-panel" class="dashboard-panel active">
+                <div class="dashboard-container">
+                    <div class="dashboard-header">
+                        <h3>
+                            <i class="fas fa-home"></i>
+                            London Housing Market Dashboard
+                            <span class="live-badge">LIVE</span>
+                        </h3>
+                        <a href="https://mounishmesaappio-yzsowxlcbncfcfctzxje7m.streamlit.app" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            Open Full Screen
+                        </a>
+                    </div>
+                    <iframe
+                        class="dashboard-iframe"
+                        src="https://mounishmesaappio-yzsowxlcbncfcfctzxje7m.streamlit.app?embedded=true"
+                        title="London Housing Market Dashboard">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- FTSE Dashboard -->
+            <div id="ftse-panel" class="dashboard-panel">
+                <div class="dashboard-container">
+                    <div class="dashboard-header ftse">
+                        <h3>
+                            <i class="fas fa-chart-line"></i>
+                            FTSE 100 Stock Analysis Dashboard
+                            <span class="live-badge">LIVE</span>
+                        </h3>
+                        <a href="https://mounishmesaappio-vjcsjtrndrnuxd9bejncdq.streamlit.app" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            Open Full Screen
+                        </a>
+                    </div>
+                    <iframe
+                        class="dashboard-iframe"
+                        src="https://mounishmesaappio-vjcsjtrndrnuxd9bejncdq.streamlit.app?embedded=true"
+                        title="FTSE 100 Stock Analysis Dashboard">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Cost of Living Dashboard -->
+            <div id="cost-of-living-panel" class="dashboard-panel">
+                <div class="dashboard-container">
+                    <div class="dashboard-header cost-of-living">
+                        <h3>
+                            <i class="fas fa-pound-sign"></i>
+                            UK Cost of Living Analysis
+                            <span class="live-badge">LIVE</span>
+                        </h3>
+                        <a href="https://mounishmesaappio-7wbagghdlcjkbiruarqwkd.streamlit.app" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            Open Full Screen
+                        </a>
+                    </div>
+                    <iframe
+                        class="dashboard-iframe"
+                        src="https://mounishmesaappio-7wbagghdlcjkbiruarqwkd.streamlit.app?embedded=true"
+                        title="UK Cost of Living Analysis Dashboard">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Projects Section -->
+    <section class="all-projects">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>All Projects</h2>
+                <p>Comprehensive portfolio of data analysis and business intelligence projects</p>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1: UK Housing -->
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);">
+                        <i class="fas fa-home"></i>
+                        <span class="project-status completed">Completed</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>UK Housing Market Analysis</h3>
+                        <p>Comprehensive analysis of HM Land Registry data covering 307,584 property transactions across all 33 London boroughs.</p>
+                        <div class="key-findings">
+                            <h4>Key Findings:</h4>
+                            <ul>
+                                <li>City of London avg: £2.67M (highest)</li>
+                                <li>6.4x price gap between boroughs</li>
+                                <li>Flats dominate at 51.8% of sales</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>SQL</span>
+                            <span>Power BI</span>
+                            <span>Streamlit</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/mounishmesa/mounishmesa.github.io/tree/main/projects/uk-housing-market" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://mounishmesaappio-yzsowxlcbncfcfctzxje7m.streamlit.app" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: FTSE 100 -->
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #065f46 0%, #10b981 100%);">
+                        <i class="fas fa-chart-line"></i>
+                        <span class="project-status completed">Completed</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>FTSE 100 Stock Analysis</h3>
+                        <p>Real-time analysis of 30 top FTSE 100 companies with sector performance, volatility metrics, and interactive filtering.</p>
+                        <div class="key-findings">
+                            <h4>Key Findings:</h4>
+                            <ul>
+                                <li>FTSE 100 1-Year Return: +21.22%</li>
+                                <li>Top Performer: Rolls-Royce +99.90%</li>
+                                <li>Best Sector: Financials +54.58%</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>yfinance</span>
+                            <span>Plotly</span>
+                            <span>Streamlit</span>
+                            <span>Pandas</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/mounishmesa/mounishmesa.github.io/tree/main/projects/ftse-analysis" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://mounishmesaappio-vjcsjtrndrnuxd9bejncdq.streamlit.app" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Cost of Living -->
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);">
+                        <i class="fas fa-pound-sign"></i>
+                        <span class="project-status completed">Completed</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>UK Cost of Living Analysis</h3>
+                        <p>ONS data analysis examining inflation trends from 1989-2024, regional price variations, and purchasing power changes across the UK.</p>
+                        <div class="key-findings">
+                            <h4>Key Findings:</h4>
+                            <ul>
+                                <li>Peak inflation: 11.1% (Oct 2022)</li>
+                                <li>Current CPI: 3.2% (still above target)</li>
+                                <li>London 17% above UK average</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>SQL</span>
+                            <span>Plotly</span>
+                            <span>Streamlit</span>
+                            <span>ONS API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/mounishmesa/mounishmesa.github.io/tree/main/projects/cost-of-living" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://mounishmesaappio-7wbagghdlcjkbiruarqwkd.streamlit.app" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Customer Segmentation -->
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #dc2626 0%, #f87171 100%);">
+                        <i class="fas fa-users"></i>
+                        <span class="project-status">Coming Soon</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Bank Customer Segmentation</h3>
+                        <p>Machine learning-based customer clustering, RFM analysis, and churn prediction for UK banking sector.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Scikit-learn</span>
+                            <span>K-Means</span>
+                            <span>Power BI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> Code</a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Transport Economics -->
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #ea580c 0%, #fb923c 100%);">
+                        <i class="fas fa-subway"></i>
+                        <span class="project-status">Coming Soon</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>London Transport & Economy</h3>
+                        <p>TfL API integration analysing transport patterns and their correlation with regional economic activity.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>API</span>
+                            <span>Folium</span>
+                            <span>Statistics</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> Code</a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: AI News Analyser -->
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #0891b2 0%, #22d3ee 100%);">
+                        <i class="fas fa-brain"></i>
+                        <span class="project-status">Coming Soon</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI Financial News Analyser</h3>
+                        <p>LLM-powered sentiment analysis of UK financial news with automated insights and stock correlation.</p>
+                        <div class="project-tech">
+                            <span>LangChain</span>
+                            <span>OpenAI</span>
+                            <span>Streamlit</span>
+                            <span>Make.com</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> Code</a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Mounish Mesa. Built with passion for data. | <a href="mailto:mounicar9496@gmail.com">mounicar9496@gmail.com</a></p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+
+        // Dashboard tab switching
+        function showDashboard(type) {
+            // Hide all panels
+            document.querySelectorAll('.dashboard-panel').forEach(panel => {
+                panel.classList.remove('active');
+            });
+
+            // Remove active from all tabs
+            document.querySelectorAll('.dashboard-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Show selected panel
+            document.getElementById(type + '-panel').classList.add('active');
+
+            // Activate clicked tab
+            event.target.closest('.dashboard-tab').classList.add('active');
+        }
+    </script>
+</body>
+</html>
